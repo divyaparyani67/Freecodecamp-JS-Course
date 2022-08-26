@@ -1,10 +1,10 @@
-Golf Code
+Q.Golf Code
 In the game of Golf, each hole has a par, meaning, the average number of strokes a golfer is expected to make in order to sink the ball in the hole to complete the play. Depending on how far above or below par your strokes are, there is a different nickname.
 
 Your function will be passed par and strokes arguments. Return the correct string according to this table which lists the strokes in order of priority; top (highest) to bottom (lowest):
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
-function golfScore(par, strokes) {
+ANS. function golfScore(par, strokes) {
   // Only change code below this line
 if (strokes == 1) {
 return names[0]
@@ -33,11 +33,47 @@ else if (strokes >= par + 3){
 
 golfScore(5, 4);
 
+ *********
 
-If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
+Q.In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
+
+A default statement should be the last case.
+
+ANS. function switchOfStuff(val) {
+  let answer = "";
+  // Only change code below this line
+switch (val) {
+  case "a":
+  answer = "apple";
+  break;
+     
+     case "b":
+     answer = "bird";
+     break;
+         
+         case "c":
+         answer = "cat";
+         break;
+              default:
+                 answer = "stuff";
+                 break;
 
 
-function caseInSwitch(val) {
+}
+
+
+  // Only change code above this line
+  return answer;
+}
+
+switchOfStuff(1);
+
+ ************
+
+Q. If you have many options to choose from, use a switch statement. A switch statement tests a value and can have many case statements which define various possible values. Statements are executed from the first matched case value until a break is encountered.
+
+
+ANS. function caseInSwitch(val) {
   let answer = "";
   // Only change code below this line
  switch(val) {
@@ -63,3 +99,6 @@ function caseInSwitch(val) {
 }
 
 caseInSwitch(1);
+
+
+************
