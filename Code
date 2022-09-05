@@ -423,7 +423,7 @@ Q. Sometimes you may want to store data in a flexible Data Structure. A JavaScri
 
 Here's an example of a complex data structure:
 
-Ans. const myMusic = [[
+Ans. const myMusic = [
   {
     "artist": "Billy Joel",
     "title": "Piano Man",
@@ -434,18 +434,15 @@ Ans. const myMusic = [[
       "LP"
     ],
     "gold": true
-  }
-],
-[ {
-    "artist": "Arijit Singh",
+  },
+     { "artist": "Arijit Singh",
     "title": "Singer",
     "release_year": 1975,
     "formats": [
       "OTT",
       "SongsPK",
-      "Yourtube"
+      "Youtube"
     ],
-    "gold": true
+    
   }
-]
 ];
