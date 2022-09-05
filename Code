@@ -407,7 +407,7 @@ phoneticLookup("charlie");
 ********
 Q. Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
 
-function checkObj(obj, checkProp) {
+Ans. function checkObj(obj, checkProp) {
   // Only change code below this line
   if (obj.hasOwnProperty(checkProp)){ 
   return obj[checkProp];
@@ -418,3 +418,34 @@ function checkObj(obj, checkProp) {
 }
 
 **********
+
+Q. Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+
+Here's an example of a complex data structure:
+
+Ans. const myMusic = [[
+  {
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true
+  }
+],
+[ {
+    "artist": "Arijit Singh",
+    "title": "Singer",
+    "release_year": 1975,
+    "formats": [
+      "OTT",
+      "SongsPK",
+      "Yourtube"
+    ],
+    "gold": true
+  }
+]
+];
