@@ -518,16 +518,27 @@ Ans. const recordCollection = {
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
-  if (prop !== "tracks" && value !== " ") {
-    records[id][prop]= value;
-  } else if (prop === "tracks" && records[id].hasOwnProperty 
-  ("tracks") === false) {
-  records[id][prop] == [value];
-  } else if (prop === "tracks"  && value !== " ") {
-    records[id][prop].push(value);
-  } else if (value === " ") {
-    delete records[id][props];
+  // Access target album in record collection
+  const album = records[id];
+
+  // If value is an empty string,
+  //  delete the given prop property from the album
+  if (value === "") {
+    delete album[prop];
   }
+  // If prop isn't tracks,
+  //  update or set that album's prop to value
+  else if (prop !== "tracks") {
+    album[prop] = value;
+  }
+  // If prop is tracks,
+  //  add value to the end of the album's existing tracks array
+  else {
+    album["tracks"] = album["tracks"] || [];
+    album["tracks"].push(value);
+  }
+
+  // Your function must always return the entire record collection object
   return records;
 }
   
