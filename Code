@@ -658,3 +658,16 @@ for (let i = 0; i < arr.length; i++) {
 }
 
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+Q. The next type of loop you will learn is called a do...while loop. It is called a do...while loop because it will first do one pass of the code inside the loop no matter what, and then continue to run the loop while the specified condition evaluates to true.
+
+Ans . // Setup
+const myArray = [];
+let i = 10;
+
+// Only change code below this line
+do {myArray.push(i);
+  i++;}
+while (i < 5) {
+  
+}
