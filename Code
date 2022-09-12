@@ -806,3 +806,13 @@ Ans. function checkEqual(a, b) {
 }
 
 checkEqual(1, 2);
+
+*************
+Q. In the previous challenge, you used a single conditional operator. You can also chain them together to check for multiple conditions.
+
+The following function uses if, else if, and else statements to check multiple conditions:
+Ans. function checkSign(num) {
+ return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+checkSign(10);
