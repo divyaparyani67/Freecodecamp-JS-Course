@@ -816,3 +816,22 @@ Ans. function checkSign(num) {
 }
 
 checkSign(10);
+
+
+********************
+Q. In a previous challenge, you learned how to use recursion to replace a for loop. Now, let's look at a more complex function that returns an array of consecutive integers starting with 1 through the number passed to the function. 
+
+Ans. // Only change code below this line
+function countdown(n){
+  if (n < 1) {
+    return[];
+  } else {
+    const arr = countdown (n -1);
+    arr.unshift(n);
+    return arr;
+  }
+  
+}
+// Only change code above this line
+
+************
