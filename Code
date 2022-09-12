@@ -753,3 +753,16 @@ Ans. function randomFraction() {
 
   // Only change code above this line
 }
+
+
+Q. It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.
+
+Use Math.random() to generate a random decimal.
+Multiply that random decimal by 20.
+Use another function, Math.floor() to round the number down to its nearest whole number.
+Ans. function randomWholeNum() {
+
+  // Only change code below this line
+
+  return Math.floor (Math.random() * 10 );
+}
