@@ -14,3 +14,26 @@ Ans. function checkScope() {
   console.log('Function scope i is: ', i);
   return i;
 }
+
+
+Q. 2 If you are unfamiliar with const, check out this challenge about the const keyword.
+
+The const declaration has many use cases in modern JavaScript.
+
+Some developers prefer to assign all their variables using const by default, unless they know they will need to reassign the value. Only in that case, they use let.
+
+However, it is important to understand that objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.
+
+Ans. const s = [5, 7, 2];
+function editInPlace() {
+  // Only change code below this line
+  
+  s[0] = 2;
+  s[1]= 5;
+  s[2]= 7;
+
+  // Using s = [2, 5, 7] would be invalid
+
+  // Only change code above this line
+}
+editInPlace();
