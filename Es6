@@ -170,3 +170,13 @@ const { today: {low: lowToday,high:highToday } } =  LOCAL_FORECAST;
 // Only change code above this line
 
 *************************
+
+
+Q. ES6 makes destructuring arrays as easy as destructuring objects.
+
+One key difference between the spread operator and array destructuring is that the spread operator unpacks all contents of an array into a comma-separated list. Consequently, you cannot pick or choose which elements you want to assign to variables.
+
+Ans. let a = 8, b = 6;
+// Only change code below this line
+
+ [ a, b] = [b, a];
