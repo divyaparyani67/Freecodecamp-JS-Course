@@ -194,3 +194,19 @@ function removeFirstTwo(list) {
   return arr;
 }
 const arr = removeFirstTwo(source);
+
+
+***********
+Q. In some situations involving array destructuring, we might want to collect the rest of the elements into a separate array.
+
+Ans. const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+  // Only change code below this line
+  const [a,b,  ...arr] = list; // Change this line
+  // Only change code above this line
+  return arr;
+}
+const arr = removeFirstTwo(source);
+
+
+*****************************
