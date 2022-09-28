@@ -265,3 +265,20 @@ Ans- const createPerson = (name, age, gender) =>  ({
      name, age, gender
   });
   // Only change code above this line
+  
+  
+  
+  *********************
+  Q. When defining functions within objects in ES5, we have to use the keyword function as follows:
+  Ans. // Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+**************
