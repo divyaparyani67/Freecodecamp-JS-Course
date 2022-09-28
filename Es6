@@ -253,3 +253,15 @@ function makeList(arr) {
 }
 
 const failuresList = makeList(result.failure);
+
+******************
+
+Q. ES6 adds some nice support for easily defining object literals.
+
+Consider the following code:
+
+Ans- const createPerson = (name, age, gender) =>  ({
+  // Only change code below this line
+     name, age, gender
+  });
+  // Only change code above this line
