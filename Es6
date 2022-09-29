@@ -331,3 +331,16 @@ thermos.temperature = 26;
 temp = thermos.temperature; // 26 in Celsius
 
 ***************************
+
+
+Q. javaScript started with a small role to play on an otherwise mostly HTML web. Today, it’s huge, and some websites are built almost entirely with JavaScript.
+
+Ans.<html>
+  <body>
+    <!-- Only change code below this line -->
+<script type="module" src="index.js"></script>
+    <!-- Only change code above this line -->
+  </body>
+</html>
+
+**************************
