@@ -356,3 +356,15 @@ const lowercaseString = (string) => {
 }
 
 export { uppercaseString, lowercaseString};
+*************************
+
+Q. import allows you to choose which parts of a file or module to load. In the previous lesson, the examples exported add from the math_functions.js file. Here's how you can import it to use in another file:
+
+Ans. // Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+import { uppercaseString, lowercaseString } from './string_functions.js';
+
+*****************************
