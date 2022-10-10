@@ -41,3 +41,14 @@ To use the .match() method, apply the method on a string and pass in the regex i
 Ans.let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let result = extractStr.match(codingRegex); // Change this line
+
+
+Q. To search or extract a pattern more than once, you can use the global search flag: g.
+
+let repeatRegex = /Repeat/g;
+testStr.match(repeatRegex);
+And here match returns the value ["Repeat", "Repeat", "Repeat"]
+
+Ans.let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/gi; // Change this line
+let result = twinkleStar.match(starRegex); // Change this line
