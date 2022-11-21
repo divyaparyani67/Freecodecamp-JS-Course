@@ -3,3 +3,17 @@ Q.1 We have defined a variable called yourArray. Complete the statement by assig
 
 Ans. let yourArray = ["string", 3, true, "read" , 5]; // Change this line
 ********************
+
+Q.2 The fundamental feature of any data structure is, of course, the ability to not only store data, but to be able to retrieve that data on command. So, now that we've learned how to create an array, let's begin to think about how we can access that array's information.
+
+When we define a simple array as seen below, there are 3 items in it:
+
+Ans. let myArray = ["a", "b", "c", "d"];
+// Only change code below this line
+myArray[1] = "d" 
+// Only change code above this line
+console.log(myArray);
+
+******************
+
+
