@@ -53,3 +53,42 @@ arr.splice(1,4)
 // Only change code above this line
 console.log(arr);
 
+***************************
+
+Q.6.Remember in the last challenge we mentioned that splice() can take up to three parameters? Well, you can use the third parameter, comprised of one or more element(s), to add to the array. This can be incredibly useful for quickly switching out an element, or a set of elements, for another.
+
+const numbers = [10, 11, 12, 12, 15];
+const startIndex = 3;
+const amountToDelete = 1;
+
+numbers.splice(startIndex, amountToDelete, 13, 14);
+console.log(numbers);
+
+
+Ans. function htmlColorNames(arr) {
+  // Only change code below this line
+  let setIndex = 0;
+  let deleteName = 2;
+arr.splice( setIndex, deleteName, "DarkSalmon", "BlanchedAlmond");
+  // Only change code above this line
+  return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+**************************
+
+Q. 7 The next method we will cover is slice(). Rather than modifying an array, slice() copies or extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index). Consider this:
+
+Ans. function forecast(arr) {
+  // Only change code below this linelet
+
+ 
+
+  return arr.slice(2, 4);;
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+**********
