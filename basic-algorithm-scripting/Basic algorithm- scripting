@@ -41,3 +41,22 @@ if(num === 0)  {
 factorialize(5);
 
 **********************
+
+Q4. Return the length of the longest word in the provided sentence.
+
+Your response should be a number.
+
+Ans.function findLongestWordLength(str) {
+  const words = str.split(" ")
+  if (words.length == 1){
+    return words[0].length;
+  }
+  return Math.max(
+    words[0].length,
+    findLongestWordLength(words.splice(1).join(" "))
+  );
+  findLongestWordLength("The quick brown fox jumped over the lazy dog");
+}
+
+
+***********************
