@@ -1,1 +1,62 @@
+Q1. Create a dog object with name and numLegs properties, and set them to a string and a number, respectively.
+
+Ans.let dog = {
+name: " ",
+numLegs: 2
+};
+
+******************
+
+Q2.Print both properties of the dog object to your console.
+Ans. let dog = {
+  name: "Spot",
+  numLegs: 4
+};
+// Only change code below this line
+console.log(dog.name, dog.numLegs)
+************************
+
+Q3. Using the dog object, give it a method called sayLegs. The method should return the sentence This dog has 4 legs.
+Ans.
+dog.sayLegs();let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {
+    return "This dog has " + dog.numLegs + " legs.";
+  }  
+};
+
+dog.sayLegs();
+
+*********************
+Q4. Modify the dog.sayLegs method to remove any references to dog. Use the duck example for guidance.
+Ans.let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
+};
+
+dog.sayLegs();
+****************
+
+Q5.Create a constructor, Dog, with properties name, color, and numLegs that are set to a string, a string, and a number, respectively.
+
+Ans.function Dog() {
+  this.name = "Albert";
+  this.color = "blue";
+  this.numLegs = 2;
+  }
+
+***************
+
+Q.6Use the Dog constructor from the last lesson to create a new instance of Dog, assigning it to a variable hound.
+Ans.function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+// Only change code below this line
+
+let hound = new Dog();
+****************
 
