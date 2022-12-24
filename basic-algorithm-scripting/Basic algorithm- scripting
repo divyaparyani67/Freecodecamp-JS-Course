@@ -105,3 +105,41 @@ Ans.function truncateString(str, num) {
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
+**********************
+
+Q9.Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+Ans.function titleCase(str) {
+  return str
+  .toLowerCase()
+  .split(" ")
+  .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+  .join(" ");
+}
+
+titleCase("I'm a little tea pot");
+*******************
+Q10.Begin inserting elements at index n of the second array.
+
+Return the resulting array. The input arrays should remain the same after the function runs.
+
+Ans.function frankenSplice(arr1, arr2, n) {
+  return [...arr2.slice(0, n), ...arr1, ...arr2.slice(n)];
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+**********************
+
+Q11. Remove all falsy values from an array. Return a new array; do not mutate the original array.
+
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+
+Hint: Try converting each value to a Boolean.
+
+Ans.function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
+For the purpose of this exercise, you should also capitalize connecting words like the and of.
