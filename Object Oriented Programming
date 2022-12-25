@@ -60,3 +60,158 @@ Ans.function Dog() {
 let hound = new Dog();
 ****************
 
+Q7 .Create another Dog constructor. This time, set it up to take the parameters name and color, and have the property numLegs fixed at 4. Then create a new Dog saved in a variable terrier. Pass it two strings as arguments for the name and color properties.
+
+Ans.function Dog(name, color) {
+  this.name = name;
+  this.color = color;
+  this.numLegs = 4;
+}
+let terrier = new Dog("George", "White");
+
+*********************
+
+Q8. Create a new instance of the House constructor, calling it myHouse and passing a number of bedrooms. Then, use instanceof to verify that it is an instance of House.
+
+Ans. function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+// Only change code below this line
+
+let myHouse = new House (2)
+myHouse instanceof House;
+
+**********************
+
+Q9. Add the own properties of canary to the array ownProps.
+Ans. function Bird(name) {
+  this.name = name;
+  this.numLegs = 2;
+}
+
+let canary = new Bird("Tweety");
+let ownProps = [];
+
+for (let property in canary) {
+  if(canary.hasOwnProperty(property)){
+    ownProps.push(property);
+  }
+}
+// Only change code below this line
+
+************************
+
+Q10.Add a numLegs property to the prototype of Dog
+Ans.function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4
+
+// Only change code above this line
+let beagle = new Dog("Snoopy");
+
+
+Q11. Add all of the own properties of beagle to the array ownProps. Add all of the prototype properties of Dog to the array prototypeProps.
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+for (let property in beagle) {
+  if (beagle.hasOwnProperty(property)){
+    ownProps.push(property);
+  }
+  else {
+    prototypeProps.push(property);
+  }
+}
+
+********************************
+Q13. Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
+Ans. function Dog(name) {
+  this.name = name;
+}
+
+// Only change code below this line
+function joinDogFraternity(candidate) {
+if (candidate.constructor === Dog) {
+  return true;
+}else {
+  return false;
+}
+}
+*****************
+Q14. Add the property numLegs and the two methods eat() and describe() to the prototype of Dog by setting the prototype to a new object.
+
+Ans. function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype = {
+  // Only change code below this line
+numLegs:4,
+eat: function() {
+},
+describe: function() {
+}
+};
+
+********************************
+
+Q15. Define the constructor property on the Dog prototype.
+Ans. function Dog(name) {
+  this.name = name;
+}
+
+// Only change code below this line
+Dog.prototype = {
+constructor: Dog,
+  numLegs: 4,
+  eat: function() {
+    console.log("nom nom nom");
+  },
+  describe: function() {
+    console.log("My name is " + this.name);
+  }
+};
+
+******************
+
+Q. 16. Use isPrototypeOf to check the prototype of beagle.
+
+Ans. function Dog(name) {
+  
+  this.name = name;
+}
+
+let beagle = new Dog("Snoopy");
+
+// Only change code below this line
+
+Dog.prototype.isPrototypeOf(beagle)
+
+*************************
+
+Q17. Modify the code to show the correct prototype chain.
+Ans. function Dog(name) {
+  this.name = name;
+}
+
+let beagle = new Dog("Snoopy");
+
+Dog.prototype.isPrototypeOf(beagle);  // yields true
+
+// Fix the code below so that it evaluates to true
+Object.prototype.isPrototypeOf(Dog.prototype);
+
+*********************
+
+Q15. 
