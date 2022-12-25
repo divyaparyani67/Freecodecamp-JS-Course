@@ -310,3 +310,111 @@ Dog.prototype.constructor = Dog;
 beagle.constructor
 
 ********************
+Q21. Add all necessary code so the Dog object inherits from Animal and the Dog's prototype constructor is set to Dog. Then add a bark() method to the Dog object so that beagle can both eat() and bark(). The bark() method should print Woof! to the console.
+
+Ans.function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+
+function Dog() { }
+
+// Only change code below this line
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog
+Dog.prototype.bark = function() {console.log("Woof!");};
+
+
+// Only change code above this line
+
+let beagle = new Dog();
+beagle.eat();
+beagle.bark();
+
+**********************
+
+Q22.Override the fly() method for Penguin so that it returns the string Alas, this is a flightless bird.
+Ans.function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Only change code below this line
+
+Penguin.prototype.fly = function (){
+  return "Alas, this is a flightless bird."
+}
+
+// Only change code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+
+*******************************
+Q23. Create a mixin named glideMixin that defines a method named glide. Then use the glideMixin to give both bird and boat the ability to glide.
+
+Ans. let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Only change code below this line
+
+let glideMixin = function(obj) {
+  obj.glide = function() {
+  }
+}
+
+glideMixin(bird);
+glideMixin(boat);
+
+*************************
+
+Q24. Change how weight is declared in the Bird function so it is a private variable. Then, create a method getWeight that returns the value of weight 15.
+
+Ans. function Bird() {
+  let weight = 15;
+
+  this.getWeight = function(){
+    return weight;
+  };
+}
+
+let penguin = new Bird();
+penguin.getWeight();
+
+********************
+Q25. Rewrite the function makeNest and remove its call so instead it's an anonymous immediately invoked function expression (IIFE).
+
+Ans. (function () {
+  console.log("A cozy nest is ready");
+})
+();
+
+*********************
+
+Q26. Create a module named funModule to wrap the two mixins isCuteMixin and singMixin. funModule should return an object.
+
+
+Ans.let funModule = ( function () {
+  return {
+    isCuteMixin: function(obj){
+      obj.isCute = function() {
+return true;
+      };
+    },
+    singMixin: function(obj) {
+      obj.sing = function() {
+    console.log("Singing to an awesome tune");
+    };
+  }
+  }
+}) ();
+
+******************
