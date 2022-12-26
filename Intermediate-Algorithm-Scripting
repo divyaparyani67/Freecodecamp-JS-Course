@@ -11,3 +11,65 @@ Ans. function sumAll(arr) {
 }
 
 sumAll([1, 4]);
+
+******************************
+
+Q2. Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.
+
+Ans. function diffArray(arr1, arr2) {
+  const difference = new Set(arr1);
+  arr2.forEach((ele) => 
+  difference.has(ele) ? difference.delete(ele) : difference.add(ele));
+  return Array.from(difference);
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+********************
+
+Q3. You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+
+Ans. function destroyer(arr, ...valsToRemove) {
+  return arr.filter(elem => !valsToRemove.includes(elem));
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+**************************
+Q4. For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), because it contains the name and its value, that was passed on as the second argument.
+
+Ans. function whatIsInAName(collection, source) {
+  const souceKeys = Object.keys(source);
+
+  return collection .filter(obj => souceKeys
+  .map(key => obj.hasOwnProperty(key) && obj[key] === source[key])
+  .reduce((a, b) =>  a && b));
+
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+
+***************************
+Q5. Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.
+
+Ans. function spinalCase(str) {
+  return str
+  .split(/\s|_|(?=[A-Z])/)
+  .join("-")
+  .toLowerCase();
+}
+
+spinalCase('This Is Spinal Tap');
+
+***********************
+
+Q6Translate the provided string to Pig Latin. Input strings are guaranteed to be English words in all lowercase.
+Ans. function translatePigLatin(str) {
+  return str
+  .replace(/^[aeiou]\w*/, "$&way")
+  .replace(/(^[^aeiou]+)(\w*)/, "$2$1ay");
+}
+
+translatePigLatin("consonant");
+
+*******************
